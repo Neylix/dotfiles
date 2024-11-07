@@ -3,18 +3,17 @@
 - Clone the repo in ~/.dotfiles/
 
 # Usage
-Inititalize
+package refer to a folder in ~/.dotfiles/
+run the commands from the ~/.dotfiles/
+to specify a destination directory, use -t option
+
+stow a package
 ```bash
 cd ~/.dotfiles
-stow .
+stow [package name]
 ```
-Rebuild symlinks after change
+unstow a package
 ```bash
 cd ~/.dotfiles
-stow -R .
-```
-Remove symlinks
-```bash
-cd ~/.dotfiles
-stow -D
+stow -D [package name]
 ```
