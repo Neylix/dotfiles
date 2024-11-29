@@ -105,6 +105,8 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
