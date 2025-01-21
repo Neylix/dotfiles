@@ -88,8 +88,7 @@ model: openrouter/deepseek/deepseek-r1
 ## Set an API key for a provider (eg: --api-key provider=<key> sets PROVIDER_API_KEY=<key>)
 #api-key: xxx
 ## Specify multiple values like this:
-api-key:
- - openrouter=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
+#api-key:
 #  - yyy
 #  - zzz
 
