@@ -1,0 +1,23 @@
+- name: openrouter/deepseek/deepseek-r1:free
+  extra_params:
+    extra_body:
+      provider:
+        # Only use these providers, in this order
+        order: ["Chutes"]
+        # Don't fall back to other providers
+        allow_fallbacks: false
+        # Only use providers supporting all parameters
+        require_parameters: true
+
+- name: openrouter/deepseek/deepseek-r1
+  edit_format: architect
+  editor_model_name: openrouter/anthropic/claude-3.5-sonnet
+  extra_params:
+    extra_body:
+      provider:
+        # Only use these providers, in this order
+        order: ["Together"]
+        # Don't fall back to other providers
+        allow_fallbacks: false
+        # Only use providers supporting all parameters
+        require_parameters: true
