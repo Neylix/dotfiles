@@ -2,10 +2,6 @@
 -- things like custom filetypes. This just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
-local whitespace_color = vim.fn.synIDattr(vim.fn.hlID "Whitespace", "fg")
-vim.api.nvim_set_hl(0, "IblIndent", { fg = whitespace_color, nocombine = true })
-vim.api.nvim_set_hl(0, "IblWhitespace", { fg = whitespace_color, nocombine = true })
-
 -- Auto resize split when window os resized
 vim.api.nvim_create_autocmd("VimResized", { command = "wincmd =" })
 

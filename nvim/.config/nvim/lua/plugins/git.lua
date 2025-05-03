@@ -10,6 +10,7 @@ return {
       require("octo").setup {
         default_remote = { "upstream", "origin" },
         suppress_missing_scope = { projects_v2 = true },
+        picker = "snacks"
       }
     end,
     lazy = false,

@@ -28,6 +28,8 @@ return {
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        ["<Leader>fd"] = { function() require("snacks.picker").highlights({ pattern = "hl_group:^Snacks" }) end, desc = "Search files" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()
@@ -52,7 +54,7 @@ return {
         ["<C-u>"] = { "<C-u>zz" },
         n = { "nzzzv" },
         N = { "Nzzzv" },
-        ["<Leader>ff"] = { function() require("telescope.builtin").git_files() end, desc = "Search files" },
+        ["<Leader>ff"] = { function() require("snacks.picker").git_files() end, desc = "Search files" },
         ["<Leader>gol"] = { "<cmd>Octo pr list<cr>" },
         ["<Leader>gos"] = { "<cmd>Octo review start<cr>" },
         ["<Leader>gov"] = { "<cmd>Octo review submit<cr>" },
