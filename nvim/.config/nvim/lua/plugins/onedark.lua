@@ -1,5 +1,5 @@
 ---@type LazySpec
 return {
-  dir = "~/Dev/onedark.nvim",
+  "navarasu/onedark.nvim",
   name = "onedark",
 }
