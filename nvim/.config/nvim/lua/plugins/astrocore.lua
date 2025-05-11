@@ -23,22 +23,9 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
-
         -- navigate buffer tabs with `H` and `L`
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
-        ["<Leader>fd"] = { function() require("snacks.picker").highlights({ pattern = "hl_group:^Snacks" }) end, desc = "Search files" },
-
-        -- mappings seen under group name "Buffer"
-        ["<Leader>bD"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Pick to close",
-        },
         -- Remap for dealing with word wrap
         k = { "v:count == 0 ? 'gk' : 'k'", expr = true, silent = true },
         j = { "v:count == 0 ? 'gj' : 'j'", expr = true, silent = true },
@@ -54,7 +41,9 @@ return {
         ["<C-u>"] = { "<C-u>zz" },
         n = { "nzzzv" },
         N = { "Nzzzv" },
+        -- Picker
         ["<Leader>ff"] = { function() require("snacks.picker").git_files() end, desc = "Search files" },
+        -- Octo
         ["<Leader>gol"] = { "<cmd>Octo pr list<cr>" },
         ["<Leader>gos"] = { "<cmd>Octo review start<cr>" },
         ["<Leader>gov"] = { "<cmd>Octo review submit<cr>" },
