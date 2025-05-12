@@ -6,10 +6,10 @@ return {
       presets = {
         lsp_doc_border = true, -- add a border to hover docs and signature help
       },
-      cmdline = {
-        opts = {
+      views = {
+        cmdline_popup = {
           position = "50%"
-        }
+        },
       }
     })
   end,
