@@ -8,6 +8,11 @@ return {
   "AstroNvim/astrolsp",
   ---@type AstroLSPOpts
   opts = {
+    config = {
+      elixirls = {
+        cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/elixir-ls") }
+      }
+    },
     formatting = {
       disabled = { -- disable formatting capabilities for the listed language servers
         "prettierd",
