@@ -43,13 +43,6 @@ return {
         N = { "Nzzzv" },
         -- Picker
         ["<Leader>ff"] = { function() require("snacks.picker").git_files() end, desc = "Search files" },
-        -- Octo
-        ["<Leader>gol"] = { "<cmd>Octo pr list<cr>" },
-        ["<Leader>gos"] = { "<cmd>Octo review start<cr>" },
-        ["<Leader>gov"] = { "<cmd>Octo review submit<cr>" },
-        ["<Leader>god"] = { "<cmd>Octo review discard<cr>" },
-        ["<Leader>gor"] = { "<cmd>Octo review resume<cr>" },
-        ["<Leader>goc"] = { "<cmd>Octo review commit<cr>" },
       },
       v = {
         -- Do not copy when deletting

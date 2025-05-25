@@ -6,6 +6,7 @@ return {
   { "tpope/vim-fugitive", lazy = false },
   {
     "pwntester/octo.nvim",
+    lazy = false,
     config = function()
       require("octo").setup {
         default_remote = { "upstream", "origin" },
@@ -13,6 +14,18 @@ return {
         picker = "snacks"
       }
     end,
-    lazy = false,
+    dependencies = {
+      {
+        "AstroNvim/astrocore",
+        opts = function(_, opts)
+          opts.mappings.n["<Leader>gol"] = { "<cmd>Octo pr list<cr>" }
+          opts.mappings.n["<Leader>gos"] = { "<cmd>Octo review start<cr>" }
+          opts.mappings.n["<Leader>gov"] = { "<cmd>Octo review submit<cr>" }
+          opts.mappings.n["<Leader>god"] = { "<cmd>Octo review discard<cr>" }
+          opts.mappings.n["<Leader>gor"] = { "<cmd>Octo review resume<cr>" }
+          opts.mappings.n["<Leader>goc"] = { "<cmd>Octo review commit<cr>" }
+        end
+      },
+    }
   },
 }
