@@ -10,7 +10,13 @@ return {
   opts = {
     config = {
       elixirls = {
-        cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/elixir-ls") }
+        cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/elixir-ls") },
+        settings = {
+          elixirLS = {
+            mcpEnabled = false,
+            suggestSpecs = false
+          }
+        }
       }
     },
     formatting = {
