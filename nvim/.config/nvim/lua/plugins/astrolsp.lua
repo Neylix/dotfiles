@@ -5,32 +5,25 @@
 
 ---@type LazySpec
 return {
-  "AstroNvim/astrolsp",
-  ---@type AstroLSPOpts
-  opts = {
-    config = {
-      elixirls = {
-        cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/elixir-ls") },
-        settings = {
-          elixirLS = {
-            mcpEnabled = false,
-            suggestSpecs = false
-          }
-        }
-      }
-    },
-    formatting = {
-      disabled = { -- disable formatting capabilities for the listed language servers
-        "prettierd",
-        "null-ls",
-      },
-      filter = function(client)
-        if client.name == "prettierd" or client.name == "null-ls" then
-          return false
-        else
-          return true
-        end
-      end,
-    },
-  },
+	{ "neovim/nvim-lspconfig", version = false, branch = "master" },
+	{ "mason-org/mason-lspconfig.nvim", version = false, branch = "main" },
+	{
+		"AstroNvim/astrolsp",
+		---@type AstroLSPOpts
+		opts = {
+			formatting = {
+				disabled = { -- disable formatting capabilities for the listed language servers
+					"prettierd",
+					"null-ls",
+				},
+				filter = function(client)
+					if client.name == "prettierd" or client.name == "null-ls" then
+						return false
+					else
+						return true
+					end
+				end,
+			},
+		},
+	},
 }
