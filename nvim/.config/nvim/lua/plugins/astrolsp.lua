@@ -5,12 +5,17 @@
 
 ---@type LazySpec
 return {
-	{ "neovim/nvim-lspconfig", version = false, branch = "master" },
-	{ "mason-org/mason-lspconfig.nvim", version = false, branch = "main" },
 	{
 		"AstroNvim/astrolsp",
 		---@type AstroLSPOpts
 		opts = {
+			config = {
+				expert = {
+					cmd = { "/home/neylix/.local/share/nvim/mason/bin/expert" },
+					root_dir = require("lspconfig.util").root_pattern("mix.exs"),
+					filetypes = { 'elixir', 'eelixir', 'heex' },
+				}
+			},
 			formatting = {
 				disabled = { -- disable formatting capabilities for the listed language servers
 					"prettierd",
@@ -24,6 +29,7 @@ return {
 					end
 				end,
 			},
+			servers = { "expert" }
 		},
 	},
 }
