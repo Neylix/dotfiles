@@ -70,7 +70,7 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zoxide mise)
+plugins=(git zoxide mise bun)
 
 # User configuration
 
@@ -98,6 +98,11 @@ plugins=(git zoxide mise)
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias ll="exa -lah --icons"
+alias vi="nvim"
+alias cat="bat"
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -108,11 +113,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias ll="exa -lah --icons"
-alias vi="nvim"
-
+# Zellij config
 export ZELLIJ_AUTO_ATTACH=true
 # eval "$(zellij setup --generate-auto-start zsh)"
 if [[ -z "$ZELLIJ" ]]; then
@@ -126,3 +127,6 @@ if [[ -z "$ZELLIJ" ]]; then
       exit
   fi
 fi
+
+export BUN_INSTALL=$HOME/.bun
+export PATH=$BUN_INSTALL/bin:$PATH
