@@ -11,10 +11,13 @@ return {
 		opts = {
 			config = {
 				expert = {
-					cmd = { "/home/neylix/.local/share/nvim/mason/bin/expert" },
+					cmd = { "/home/neylix/.local/share/nvim/mason/bin/expert", "--stdio" },
 					root_dir = require("lspconfig.util").root_pattern("mix.exs"),
 					filetypes = { 'elixir', 'eelixir', 'heex' },
-				}
+				},
+				-- elixirls = {
+				-- 	cmd = { "/home/neylix/.local/share/nvim/mason/bin/elixir-ls" },
+				-- }
 			},
 			formatting = {
 				disabled = { -- disable formatting capabilities for the listed language servers
