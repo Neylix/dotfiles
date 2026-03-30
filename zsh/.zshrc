@@ -117,6 +117,8 @@ fi
 export BUN_INSTALL=$HOME/.bun
 export PATH=$BUN_INSTALL/bin:$PATH
 export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(($(nproc)/2))
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -131,4 +133,5 @@ alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias ll="exa -lah --icons"
 alias vi="nvim"
-alias cat="bat"
+alias cat="bat -pp"
+alias less="bat"
