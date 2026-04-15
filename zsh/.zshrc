@@ -114,11 +114,19 @@ if [[ -z "$ZELLIJ" ]]; then
   fi
 fi
 
+# Setup bun install folders
 export BUN_INSTALL=$HOME/.bun
 export PATH=$BUN_INSTALL/bin:$PATH
+# Elixir parition count for deps compilation
 export MIX_OS_DEPS_COMPILE_PARTITION_COUNT=$(($(nproc)/2))
+# Set man to use bat instead of less
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
+# Make new shells get the history lines from all previous
+# shells instead of the default "last window closed" history.
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# Don't add certain commands to the history file.
+export HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|ll|* --help)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
