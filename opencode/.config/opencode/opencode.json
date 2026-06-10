@@ -11,6 +11,11 @@
         "ctx7sk-265d9afa-f7b1-4cf4-b2c2-632d2e8e6d30"
       ],
       "enabled": true
-    }
-  }
+    },
+    "exa": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp",
+      "enabled": true
+    },
+  },
 }
