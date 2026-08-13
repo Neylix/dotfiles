@@ -139,7 +139,7 @@ export HISTORY_IGNORE="(\&|[bf]g|c|clear|history|exit|q|pwd|ll|* --help)"
 # Example aliases
 alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias ll="exa -lah --icons"
+alias ll="exa -lah --icons auto"
 alias vi="nvim"
 alias cat="bat -pp"
 alias less="bat"
