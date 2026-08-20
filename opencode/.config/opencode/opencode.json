@@ -3,6 +3,7 @@
   "plugin": [
     "@dietrichgebert/ponytail"
   ],
+  "instructions": ["~/.agents/skills/unslop/SKILL.md"],
   "mcp": {
     "context7": {
       "type": "local",
