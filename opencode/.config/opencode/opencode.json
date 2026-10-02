@@ -3,9 +3,6 @@
   "plugins": [
     "@dietrichgebert/ponytail"
   ],
-  "instructions": [
-    "~/.agents/skills/unslop/SKILL.md"
-  ],
   "mcp": {
     "servers": {
       "context7": {
