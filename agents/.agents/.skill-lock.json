@@ -1,0 +1,40 @@
+{
+  "version": 3,
+  "skills": {
+    "unslop": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "pstack/skills/unslop/SKILL.md",
+      "skillFolderHash": "4e572dd70e5557f490e3991c52ea58f0dcee8936",
+      "installedAt": "2026-10-02T09:30:28.441Z",
+      "updatedAt": "2026-10-16T13:49:47.639Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-10-02T09:30:37.928Z",
+      "updatedAt": "2026-10-02T09:30:37.928Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "droid",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}
