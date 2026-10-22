@@ -18,6 +18,16 @@
       "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
       "installedAt": "2026-10-02T09:30:37.928Z",
       "updatedAt": "2026-10-02T09:30:37.928Z"
+    },
+    "git-cleanup": {
+      "source": "everyinc/compound-engineering-plugin",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/everyinc/compound-engineering-plugin.git",
+      "ref": "06e2eb00bc1b80e3f0ed54c030237e2b70af2c0b",
+      "skillPath": "plugins/compound-engineering/skills/ce-clean-gone-branches/SKILL.md",
+      "skillFolderHash": "7c313f086f93bfaf2b1a772e127d8ec56cb05a84",
+      "installedAt": "2026-10-22T09:16:25.143Z",
+      "updatedAt": "2026-10-22T09:16:25.143Z"
     }
   },
   "dismissed": {
